@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "debug.h": "c",
+        "main.h": "c",
+        "gfx.h": "c",
+        "getcsc.h": "c"
+    }
+}

@@ -1,0 +1,64 @@
+palettes:
+  - name: global_palette
+    fixed-entries:
+      - color: {index: 0, r: 107, g: 44, b: 74}
+      - color: {index: 1, r: 0, g: 0, b: 0}
+    images: automatic
+
+converts:
+  - name: title_screen
+    palette: global_palette
+    transparent-color-index: 0
+    images:
+      - logo.png
+      - palm_leaf.png
+      - palm_leaf_right.png
+      - egg.png
+      - egg_shadow.png
+  - name: sprites
+    palette: global_palette
+    transparent-color-index: 0
+    images:
+      - arrows_cse.png
+      - little_guy_cse.png
+      - arrows_oldschool.png
+      - little_guy_oldschool.png
+      - arrows_modern.png
+      - little_guy_modern.png
+      - icon_modern.png
+      - icon_cse.png
+      - icon_oldschool.png
+  - name: tiles_cse
+    palette: global_palette
+    tilesets:
+      tile-width: 16
+      tile-height: 16
+      images:
+        - tiles_cse.png
+  - name: tiles_modern
+    palette: global_palette
+    tilesets:
+      tile-width: 16
+      tile-height: 16
+      images:
+        - tiles_modern.png
+  - name: tiles_oldschool
+    palette: global_palette
+    tilesets:
+      tile-width: 10
+      tile-height: 10
+      images:
+        - tiles_oldschool.png
+
+outputs:
+  - type: c
+    include-file: gfx.h
+    palettes:
+      - global_palette
+    converts:
+      - title_screen
+      - sprites
+      - tiles_cse
+      - tiles_oldschool
+      - tiles_modern
+
